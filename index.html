@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYNTHRA Shopping App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>MYNTHRA Shopping App</h1>
+    <div>
+        <h2>Add to Cart</h2>
+        <input type="text" id="cart_product_id" placeholder="Product ID">
+        <input type="text" id="cart_name" placeholder="Name">
+        <input type="number" id="cart_price" placeholder="Price">
+        <input type="text" id="cart_image_url" placeholder="Image URL">
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <div>
+        <h2>Add to Wishlist</h2>
+        <input type="text" id="wishlist_product_id" placeholder="Product ID">
+        <input type="text" id="wishlist_name" placeholder="Name">
+        <input type="number" id="wishlist_price" placeholder="Price">
+        <input type="text" id="wishlist_image_url" placeholder="Image URL">
+        <button onclick="addToWishlist()">Add to Wishlist</button>
+    </div>
+    <div>
+        <h2>Cart Items</h2>
+        <button onclick="getCartItems()">Get Cart Items</button>
+        <ul id="cart_items"></ul>
+    </div>
+    <div>
+        <h2>Wishlist Items</h2>
+        <button onclick="getWishlistItems()">Get Wishlist Items</button>
+        <ul id="wishlist_items"></ul>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
